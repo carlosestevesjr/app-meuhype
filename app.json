@@ -1,0 +1,67 @@
+{
+  "name": "Meu Hype",
+  "displayName": "Meu Hype",
+  "expo": {
+    "name": "app-meuhype",
+    "slug": "app-meuhype",
+    "version": "1.0.0",
+    "icon": "./src/assets/images/icone.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/images/splash@2x.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "expo.ts",
+        "expo.tsx",
+        "expo.js",
+        "expo.jsx",
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "wasm",
+        "svg"
+      ]
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.carlosestevesjr.meuhype",
+      "supportsTablet": true,
+      "buildNumber": "10",
+      "infoPlist": {},
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/icone.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.carlosestevesjr.meuhype",
+      "versionCode": 10,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./src/assets/images/icone.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5e14dca0-fe5a-4ee4-807a-3b365b4165ff"
+      }
+    }
+  }
+}
