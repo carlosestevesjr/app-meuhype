@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     // height: hpd(94.7),
-    backgroundColor: colors.secundary100
+    backgroundColor: colors.background
   },
   container: {
     // padding:wpd(2)

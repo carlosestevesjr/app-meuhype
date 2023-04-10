@@ -3,52 +3,104 @@ import { colors, metrics } from '../../styles';
 import { hpd, wpd } from '../../helpers';
 
 const styles = StyleSheet.create({
-  contentContainer: {
+  container: {
+  },
+  containerNews: {
     flexDirection: 'column',
     justifyContent: 'center',
-    minHeight: hpd(94.7),
+    padding: wpd(2),
+    // backgroundColor:colors.dark,
+    // borderBottomWidth:1,
+    marginBottom: wpd(2)
   },
-  headerContainer: {
+  topNews: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: wpd(10),
+    marginVertical: wpd(2)
   },
-  headerUser: {
+
+  contentNewsChannelLogo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    // justifyContent: 'space-between',
+    // width:wpd(30) ,
+
+  },
+  contentNewsBgChannelLogo: {
+    borderRadius: 5,
+    padding: wpd(2),
+    backgroundColor: colors.light,
+    // flexDirection: 'row',
+    // justifyContent: 'space-between',
+  },
+  newsChannelLogo: {
+    width: 45,
+    height: 27
+  },
+  newsChannelName: {
+    marginHorizontal: wpd(2),
     fontFamily: 'TradeGothicBold',
-    fontSize: colors.fontUltraLarge,
-    color: colors.light,
-    padding: wpd(2)
+    fontSize: colors.fontSmall,
+    color: colors.black
   },
-  contentText: {
-    textAlign: 'center',
+  newsDate: {
+    marginHorizontal: wpd(2),
+    fontFamily: 'RobotoRegular',
+    fontSize: colors.fontSmall
+  },
+
+  contentNews: {
     flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.light,
+    borderRadius: 5,
+    paddingHorizontal: wpd(2),
   },
-  contentText2: {
-    justifyContent: 'center',
+  newsContentImage: {
+    position: 'relative',
+    width: wpd(26),
+    marginVertical: wpd(2),
+  },
+  newsImage: {
+    borderRadius: 5,
+    width: wpd(26),
+    height: 60,
+  },
+  newsTitle: {
+    textTransform: 'uppercase',
+    margin: wpd(2),
+    width: wpd(64),
     flexDirection: 'row',
-  },
-  text: {
-    margin: wpd(3),
-    fontFamily: 'TradeGothic',
-    fontSize: colors.fontLarge,
-    color: colors.light,
-  },
-  textDestaque: {
-    textAlign: 'left',
+    flexWrap: 'wrap',
     fontFamily: 'TradeGothicBold',
-    fontSize: colors.fontLarge,
-    color: colors.primary300,
+    fontSize: colors.fontSmall,
+    color: colors.black,
   },
-  contentBtn: {
+  bottomNews: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    marginVertical: wpd(10),
-  }
-  // modalBtn: {
-  //   padding: metrics.basePadding,
-  //   marginVertical: metrics.baseMargin / 4,
-  // },
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: wpd(2),
+  },
+  newsContentTags: {
+    // backgroundColor:'#d3d3d3',
+    width: '90%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+  },
+  newsTag: {
+    margin: wpd(1),
+    borderRadius: 20,
+    padding: wpd(2),
+    backgroundColor: colors.primary500
+  },
+  newsTagName: {
+    fontFamily: 'TradeGothicBold',
+    fontSize: colors.fontExtraSmall,
+    color: colors.light
+  },
 });
 
 export default styles;

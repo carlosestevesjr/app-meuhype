@@ -5,8 +5,9 @@ async function getToken() {
   const token = await AsyncStorage.getItem('iguacu:token');
   return token;
 }
+
 const api = axios.create({
-  baseURL: 'https://pokeapi.co/api/v2',
+  baseURL: 'http://192.168.15.9/meuhype/public/api/v1',
   // headers: {
   //   'Accept-Language': 'pt',
   // },

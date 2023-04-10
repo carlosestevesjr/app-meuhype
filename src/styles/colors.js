@@ -1,18 +1,18 @@
 //Primary
-const primary50 = '#E7E3EF';
-const primary100 = '#C4B9D7';
-const primary200 = '#9D8ABC'; //Primary Variant Light,
-const primary300 = '#765BA1';
-const primary400 = '#58388C';
-const primary500 = '#3B1578'; //Cor Base Da Aplicação,
-const primary600 = '#351270';
-const primary700 = '#2D0F65'; //Variant Dark,
-const primary800 = '#260C5B';
-const primary900 = '#190648';
-const primaryA100 = '#997DFF';
-const primaryA200 = '#714AFF';
-const primaryA400 = '#4917FF';
-const primaryA700 = '#3600FD';
+const primary50 = '#E6EBEF';
+const primary100 = '#C1CDD7';
+const primary200 = '#97ACBC'; //Primary Variant Light,
+const primary300 = '#6D8BA1';
+const primary400 = '#4E728C';
+const primary500 = '#2F5978'; //Cor Base Da Aplicação,
+const primary600 = '#2A5170';
+const primary700 = '#234865'; //Variant Dark,
+const primary800 = '#1D3E5B';
+const primary900 = '#122E48';
+const primaryA100 = '#83BEFF';
+const primaryA200 = '#50A4FF';
+const primaryA400 = '#1D89FF';
+const primaryA700 = '#037CFF';
 
 //Secundary
 const secundary50 = '#F6E2ED';
@@ -103,7 +103,7 @@ export default {
   black: '#000000',
 
   //Background
-  background: '#8A6C3E',
+  background: '#EFEFEF',
 
   //Surface( Superfice - Box Cards )
   surface: '#E7EFE6',

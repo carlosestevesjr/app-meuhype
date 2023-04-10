@@ -48,7 +48,7 @@ export default function CustomDrawerContent({
             width={styles.logoMenu.width}
             height={styles.logoMenu.height}
           />
-          <Text style={styles.textLogo}>IG MÁQUINAS</Text>
+          <Text style={styles.textLogo}>MEU HYPE</Text>
         </TouchableOpacity>
         <View >
           {items.map(({ icon, name, func, screen, focused, route }, i) => (

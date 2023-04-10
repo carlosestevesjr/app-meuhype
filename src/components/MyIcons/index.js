@@ -9,6 +9,10 @@ import IconMoney from "../../assets/icons/money.svg";
 import IconGear from "../../assets/icons/gear.svg";
 import IconOut from "../../assets/icons/out.svg";
 import IconClose from "../../assets/icons/close.svg";
+import IconSite from "../../assets/icons/site.svg";
+import IconPodcast from "../../assets/icons/podcast.svg";
+import IconYoutube from "../../assets/icons/youtube.svg";
+import IconArrowCircleRight from "../../assets/icons/arrow_circle_right.svg";
 
 const MyIcons = ({
   iconName,
@@ -96,6 +100,42 @@ const MyIcons = ({
       />
     }else if (iconName && iconName == 'close') {
       return <IconClose
+        style={[
+          styles.icon,
+          (iconColor) && { 'color': iconColor },
+        ]}
+        width={(btnSizeType) ? iconSizeMonut() : widthIcon}
+        height={(btnSizeType) ? iconSizeMonut() : heightIcon}
+      />
+    }else if (iconName && iconName == 'site') {
+      return <IconSite
+        style={[
+          styles.icon,
+          (iconColor) && { 'color': iconColor },
+        ]}
+        width={(btnSizeType) ? iconSizeMonut() : widthIcon}
+        height={(btnSizeType) ? iconSizeMonut() : heightIcon}
+      />
+    }else if (iconName && iconName == 'podcast') {
+      return <IconPodcast
+        style={[
+          styles.icon,
+          (iconColor) && { 'color': iconColor },
+        ]}
+        width={(btnSizeType) ? iconSizeMonut() : widthIcon}
+        height={(btnSizeType) ? iconSizeMonut() : heightIcon}
+      />
+    }else if (iconName && iconName == 'youtube') {
+      return <IconYoutube
+        style={[
+          styles.icon,
+          (iconColor) && { 'color': iconColor },
+        ]}
+        width={(btnSizeType) ? iconSizeMonut() : widthIcon}
+        height={(btnSizeType) ? iconSizeMonut() : heightIcon}
+      />
+    }else if (iconName && iconName == 'arrow_circle_right') {
+      return <IconArrowCircleRight
         style={[
           styles.icon,
           (iconColor) && { 'color': iconColor },

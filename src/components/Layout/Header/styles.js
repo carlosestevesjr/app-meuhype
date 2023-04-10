@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
     paddingRight: hpd(2),
     paddingTop: hpd(5),
     // paddingBottom: hpd(1),
-    height: hpd(10),
-    backgroundColor: colors.primary400,
+    height: hpd(11),
+    backgroundColor: colors.primary500,
   },
   containerContent: {
     with: '100%',

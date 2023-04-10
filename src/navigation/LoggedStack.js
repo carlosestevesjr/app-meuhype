@@ -13,6 +13,7 @@ import QuotationMount from '../screens/QuotationMount';
 import Quotations from '../screens/Quotations';
 import Configurations from '../screens/Configurations';
 import Outhers from '../screens/Outhers';
+import FeedProvider from '../contexts/FeedContext';
 
 const Drawer = createDrawerNavigator();
 
@@ -44,7 +45,9 @@ const titleOptions = (title, props) => ({
 })
 
 const ComponentDashboard = (navigation, props) => (
-  <Dashboard {...props}  {...navigation} />
+  <FeedProvider>
+    <Dashboard {...props}  {...navigation} />
+  </FeedProvider>
 )
 
 export default function LoggedStack() {
