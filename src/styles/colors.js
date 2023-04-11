@@ -101,6 +101,7 @@ export default {
   light: '#FFFFFF',
   dark: '#252525',
   black: '#000000',
+  gray:'#D9D9D9',
 
   //Background
   background: '#EFEFEF',

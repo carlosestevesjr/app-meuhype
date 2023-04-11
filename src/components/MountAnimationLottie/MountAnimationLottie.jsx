@@ -13,12 +13,12 @@ const MountAnimationLottie = (props) => {
   //Cicle Life
   useEffect(() => {
     animation.current.play();
-  },[])
+  })
 
   return (
     <View >
       <LottieView
-        style={{ width: 80, height: 80 }}
+        style={styles.sampleStyle}
         ref={animation}
         source={props.nameLottie}
         loop

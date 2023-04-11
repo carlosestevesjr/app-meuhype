@@ -67,7 +67,7 @@ export default function App() {
 
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <NavigationContainer>
@@ -78,6 +78,5 @@ export default function App() {
         </PersistGate>
       </Provider>
     </View>
-
   );
 }

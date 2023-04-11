@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { Image, Dimensions, View, Text, TouchableOpacity, RefreshControl } from 'react-native';
-import LottieView from 'lottie-react-native';
+import { Image, View, Text, TouchableOpacity, RefreshControl } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { Creators as FeedActions } from '../../store/reducers/feed';
 
@@ -19,7 +18,8 @@ import { FlatList } from 'react-native-gesture-handler';
 import { useCallback } from 'react';
 import MyIcons from '../../components/MyIcons';
 import { FeedContext } from '../../contexts/FeedContext';
-import MountAnimationLottie from '../../components/MountAnimationLottie/MountAnimationLottie';
+import { LoaderScroll } from '../../components/Loaders';
+import TagsRecents from '../../components/TagsRecents/TagsRecents';
 
 const Dashboard = ({ navigation }) => {
 
@@ -47,6 +47,7 @@ const Dashboard = ({ navigation }) => {
     if (request) {
       updatefeedController(payload)
     }
+
   }, [])
 
   const typeImage = (image, channel_type) => {
@@ -178,75 +179,51 @@ const Dashboard = ({ navigation }) => {
       </View>
   )
 
-  const HeaderList = ({ }) => (
-    <>
-      {/* <Text>Teste</Text> */}
-    </>
-  )
-
   const refreshingAll = () => {
     const payload = {
       quantity: 20,
       page: 1,
       data: []
     }
-
     const request = dispatch(FeedActions.feedRequest(payload));
     if (request) {
       updatefeedController(payload)
     }
   }
 
-  const RenderLoader = () => {
+  const Loader = () => {
     if (!loading) {
       return null;
     } else {
-      return (
-        <View style={{ width: 440, alignSelf: 'center', position: 'absolute', zIndex: 999, top: '50%', backgroundColor: colors.primary400, padding: 16 }}>
-          <MountAnimationLottie nameLottie={require("../../assets/lottie/camera-cinema.json")} />
-        </View>
-      );
+      return <LoaderScroll />
     }
   };
 
   return (
     <>
+      {/* <Layout> */}
+      <FlatList
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={refreshingAll} />
+        }
+        initialNumToRender={20}
+        // scrollEnabled={true}
+        maxToRenderPerBatch={20}
+        removeClippedSubviews={true}
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={keyExtractor}
+        onEndReachedThreshold={0.5}
+        onEndReached={({ distanceFromEnd }) => {
+          if (distanceFromEnd >= 0) {
+            moreFeed()
+          }
+        }}
+      />
+      {Loader()}
 
-      <Layout>
-        <View style={styles.container}>
-          <FlatList
-            // ListHeaderComponent={HeaderList}
-            // ListFooterComponent={renderLoader}
-            refreshControl={
-              <RefreshControl refreshing={refreshing} onRefresh={refreshingAll} />
-            }
-            initialNumToRender={20}
-            scrollEnabled={true}
-            maxToRenderPerBatch={20}
-            // horizontal={true}
-            windowSize={Dimensions.get('window').height}
-            // inverted={true}	
-            // maxHeight={'100%'}
-            // refreshing={true}
-            removeClippedSubviews={true}
-            // windowSize={21}
-            // getItemLayout={getItemLayout}
-            data={data}
-            renderItem={renderItem}
-            keyExtractor={keyExtractor}
-            onEndReachedThreshold={0.5}
-            onEndReached={({ distanceFromEnd }) => {
-              if (distanceFromEnd >= 0) {
-                console.log('finish')
-                moreFeed()
-              }
-            }}
-          />
-        </View>
-        {RenderLoader()}
-        {/* <Text>{JSON.stringify(data, null, 2)}</Text> */}
-
-      </Layout>
+      <TagsRecents />
+      {/* </Layout> */}
     </>
   );
 };

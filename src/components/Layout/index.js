@@ -5,13 +5,11 @@ import styles from './styles';
 
 export default Layout = ({ children }) => {
   return (
-    <SafeAreaView>
-      {/* <ScrollView> */}
-        <View style={styles.container}>
-          {children}
-        </View>
-      {/* </ScrollView> */}
-    </SafeAreaView>
+    <View style={styles.container} >
+      {/* <SafeAreaView> */}
+        {children}
+      {/* </SafeAreaView> */}
+    </View >
   );
 };
 
