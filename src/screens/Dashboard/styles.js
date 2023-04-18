@@ -4,6 +4,7 @@ import { hpd, wpd } from '../../helpers';
 
 const styles = StyleSheet.create({
   container: {
+    
   },
   containerNews: {
     flexDirection: 'column',
@@ -59,18 +60,18 @@ const styles = StyleSheet.create({
   },
   newsContentImage: {
     position: 'relative',
-    width: wpd(26),
+    width: wpd(30),
     marginVertical: wpd(2),
   },
   newsImage: {
     borderRadius: 5,
-    width: wpd(26),
-    height: 60,
+    width: wpd(30),
+    height: 75,
   },
   newsTitle: {
     textTransform: 'uppercase',
     margin: wpd(2),
-    width: wpd(64),
+    width: wpd(60),
     flexDirection: 'row',
     flexWrap: 'wrap',
     fontFamily: 'TradeGothicBold',

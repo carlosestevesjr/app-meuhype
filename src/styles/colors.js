@@ -36,8 +36,9 @@ const brownDark = '#8A6C3E';
 export default {
   //link gerar paleta de cores http://mcg.mbitson.com/#!?mcgpalette0=%23377c2b&mcgpalette1=%23fbca25&themename=Igua%C3%A7u%20Maquinas
   transparent: 'transparent',
-  darkTransparent: 'rgba(0,0,0,0.6)',
+  darkTransparent: 'rgba(0,0,0,0.3)',
   whiteTransparent: 'rgba(255,255,255,0.3)',
+  darkTransparent2: 'rgba(37,45,62,0.5)',
 
   //Primary
   primary50: primary50,

@@ -21,6 +21,8 @@ import { FeedContext } from '../../contexts/FeedContext';
 import { LoaderScroll } from '../../components/Loaders';
 import TagsRecents from '../../components/TagsRecents/TagsRecents';
 
+import ChannelsHighlight from '../../components/ChannelsHighlight/ChannelsHighlight';
+
 const Dashboard = ({ navigation }) => {
 
   const dispatch = useDispatch();
@@ -199,6 +201,12 @@ const Dashboard = ({ navigation }) => {
     }
   };
 
+  const ListFooter = () => {
+    return (
+      <View style={{paddingBottom:100}} />
+    );
+  };
+
   return (
     <>
       {/* <Layout> */}
@@ -206,8 +214,8 @@ const Dashboard = ({ navigation }) => {
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={refreshingAll} />
         }
+        ListFooterComponent={ListFooter}
         initialNumToRender={20}
-        // scrollEnabled={true}
         maxToRenderPerBatch={20}
         removeClippedSubviews={true}
         data={data}
@@ -222,6 +230,7 @@ const Dashboard = ({ navigation }) => {
       />
       {Loader()}
 
+      <ChannelsHighlight />
       <TagsRecents />
       {/* </Layout> */}
     </>
